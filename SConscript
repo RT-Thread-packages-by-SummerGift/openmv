@@ -23,6 +23,6 @@ if rtconfig.CROSS_TOOL == 'gcc':
 elif rtconfig.CROSS_TOOL == 'keil':
     LOCAL_CCFLAGS += ' --c99'
 
-group = DefineGroup('Openmv', src, depend = ['PKG_USING_MICROPYTHON'], CPPPATH = path, LOCAL_CCFLAGS = LOCAL_CCFLAGS)
+group = DefineGroup('Openmv', src, depend = ['PKG_USING_MICROPYTHON', 'PKG_USING_OPENMV'], CPPPATH = path, LOCAL_CCFLAGS = LOCAL_CCFLAGS)
 
 Return('group')
